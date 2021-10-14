@@ -197,6 +197,9 @@ main {
 }
 
 @media screen and (max-width:600px) {
+    header {
+        background-image: url('../assets/images/bg-header-mobile.svg');
+    }
     main {
         width: 90%;
     }
