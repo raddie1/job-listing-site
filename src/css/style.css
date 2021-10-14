@@ -1,0 +1,237 @@
+header  {
+    background-image: url('../assets//images//bg-header-desktop.svg');
+    background-size: cover;
+    background-color: #5ba4a4;
+    height: 150px;
+    position: relative;
+}
+
+header .filter-block {
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: 0 0 15px 10px #5ba4a44b;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header .filter-block > button {
+    margin-left: auto;
+    font-size: 17px;
+    background-color: transparent;
+    color: #5ba4a4;
+    border: none;
+    cursor: pointer;
+}
+
+header .filter-block .filter {
+    display: flex;    
+    height: 45px;
+    background-color: #5ba4a44b;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+header .filter-block .filter span {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    color: #5ba4a4;
+    padding: 0px 10px;
+}
+
+header .filter-block .filter button {
+    width: 45px;
+    border: none;
+    cursor: pointer;
+    background-color: #5ba4a4;
+    color: #fff;
+    transition: .5s;
+}
+
+header .filter-block .filter button:hover {
+    background-color: #000;
+}
+
+main {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.job-card {
+    background-color: #fff;
+    box-shadow: 0 0 15px 10px #5ba4a44b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 3%;
+    overflow: hidden;
+}
+
+.job-card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.job-card .details {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.job-card .details .top-text{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.job-card .details .top-text .title {
+    font-weight: bold;
+    color: #5ba4a4;
+}
+
+.job-card .details .top-text button {
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.job-card .details .top-text button:first-child {
+    background-color: #5ba4a4;
+    color: white;
+}
+
+.job-card .details .top-text button:last-child {
+    background-color: #000;
+    color: white;
+}
+
+.job-card .details .info {
+    color: #91adad;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.job-card .details .info span {
+    position: relative;
+}
+
+.job-card .details .info span:not(:last-child)::after {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #91adad;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -18px;
+}
+
+.job-card .tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.job-card .tags button {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5ba4a44b;
+    color: #5ba4a4;
+    border: none;
+    transition: .5s;
+}
+
+.job-card .tags button:hover {
+    background-color: #5ba4a4;
+    color: #fff;
+}
+
+.job-card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background-color: #5ba4a4;
+    left: 0;
+    top: 0;
+    transition: .5s;
+    opacity: 0;
+}
+
+.job-card .details h2 {
+    transition: .5s;
+    cursor: pointer;
+}
+
+.job-card:hover .details h2 {
+    color: #5ba4a4;
+}
+.job-card:hover::before {
+    opacity: 1;
+}
+
+@media screen and (max-width:1050px) {
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-card .tags {
+        padding: 10px 0;
+        margin-left: 15%;
+    }   
+}
+
+@media screen and (max-width:600px) {
+    main {
+        width: 90%;
+    }
+    .job-card {
+        overflow: visible;
+        padding: 40px 3%;
+    }
+
+    .job-card:not(:last-child) {
+        margin-bottom: 70px;
+    }
+
+    .job-card .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-card .tags {
+        margin-left: 0;
+    }
+
+    .job-card figure {
+        width: 65px;
+        height: 65px;
+        overflow: hidden;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        transform: translateY(-33px);
+    }
+
+    .job-card figure img {
+        width: 100%;
+    }
+}
+
+
+
